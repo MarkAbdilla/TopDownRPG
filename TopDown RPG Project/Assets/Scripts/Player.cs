@@ -15,20 +15,27 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        GetMoveDelta();
 
-        moveDelta = new Vector3(x,y,0);
-
-        if(moveDelta.x > 0)
+        if (GetMoveDelta().x > 0)
         {
             transform.localScale = Vector3.one;
         }
-        else if (moveDelta.x < 0)
+        else if (GetMoveDelta().x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        transform.Translate(moveDelta * Time.deltaTime);
+        transform.Translate(GetMoveDelta() * Time.deltaTime);
+    }
+
+    private Vector3 GetMoveDelta()
+    {
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        moveDelta = new Vector3(x, y, 0);
+
+        return moveDelta;
     }
 }
