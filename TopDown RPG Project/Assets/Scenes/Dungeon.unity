@@ -59781,7 +59781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2381247105611285849, guid: a35658ade6aabb9439dd87611959b1eb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2381247105611285849, guid: a35658ade6aabb9439dd87611959b1eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59829,3 +59829,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a35658ade6aabb9439dd87611959b1eb, type: 3}
+--- !u!1 &1882653549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3910591724714602170, guid: df297ac600d07a943b2dcb0597cf8ec3, type: 3}
+  m_PrefabInstance: {fileID: 785128064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882653550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882653549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6b5d346d3b82f44a625b2940910da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
