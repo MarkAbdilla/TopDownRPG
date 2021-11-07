@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +9,14 @@ public class GameManager : MonoBehaviour
     
     private  void Awake()
     {
+        if (GameManager.instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         instance = this;
+        SceneManager.sceneLoaded += LoadState;
+        DontDestroyOnLoad(gameObject);
     }
 
     [SerializeField] List<Sprite> playerSprites;
@@ -23,11 +31,11 @@ public class GameManager : MonoBehaviour
 
     public void SaveState()
     {
-
+        Debug.Log("Saving");
     }
 
-    public void LoadState()
+    public void LoadState(Scene s, LoadSceneMode mode)
     {
-        
+        Debug.Log("Loading");
     }
 }
