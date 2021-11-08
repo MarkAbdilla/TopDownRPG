@@ -31,11 +31,26 @@ public class GameManager : MonoBehaviour
 
     public void SaveState()
     {
-        Debug.Log("Saving");
+        string s = "";
+
+        s += "0" + "|";
+        s += goldCoins.ToString() + "|";
+        s += experiencePoints.ToString() + "|";
+        s += "0";
+
+        PlayerPrefs.SetString("SaveState", s);
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
     {
-        Debug.Log("Loading");
+        if (!PlayerPrefs.HasKey("SaveState"))
+        {
+            return;
+        }
+        
+        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+
+        goldCoins = int.Parse(data[1]);
+        experiencePoints = int.Parse(data[2]);
     }
 }
