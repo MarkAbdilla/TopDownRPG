@@ -44,7 +44,14 @@ public class Weapon : Collidable
             }
             else
             {
-                Debug.Log(collider.name);
+                Damage dmg = new Damage
+                {
+                    damageAmount = damagePoints,
+                    origin = transform.position,
+                    pushForce = pushForce
+                };
+
+                collider.SendMessage("ReceiveDamage", dmg);
             }
         }
     }
