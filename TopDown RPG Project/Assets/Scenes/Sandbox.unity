@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 575968927}
   - component: {fileID: 575968926}
   - component: {fileID: 575968925}
+  - component: {fileID: 575968928}
   m_Layer: 7
   m_Name: enemy_0
   m_TagString: Fighter
@@ -444,6 +445,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575968928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575968924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee3bf1f5a3d07c469b0a1f4f22253a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 10
+  maxHitPoints: 10
+  pushRecoverySpeed: 0.2
 --- !u!1 &593608114
 GameObject:
   m_ObjectHideFlags: 0
