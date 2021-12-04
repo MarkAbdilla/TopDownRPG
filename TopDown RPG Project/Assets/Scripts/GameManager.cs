@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<int> weaponPrices;
     [SerializeField] List <int> xpTable;
 
-    [SerializeField] Player player;
+    public Player player;
     [SerializeField] FloatingTextManager floatingTextManager;
 
-    [SerializeField] int goldCoins;
-    [SerializeField] int experiencePoints;
+    public int goldCoins;
+    public int experiencePoints;
 
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
